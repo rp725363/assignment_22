@@ -1,0 +1,96 @@
+1. What is the result of the code, and explain?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+print(X)
+
+
+>>> func()
+Ans:-
+iNeuron
+
+
+2. What is the result of the code, and explain?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+X = 'NI!'
+
+
+>>> func()
+>>> print(X)
+
+Ans:-
+iNeuron
+
+3. What does this code print, and why?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+X = 'NI'
+print(X)
+
+
+>>> func()
+>>> print(X)
+Ans:-
+Here print() will print  "iNeuron " as we have given variable X to iNeuron.
+
+4. What output does this code produce? Why?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+global X
+X = 'NI'
+
+
+>>> func()
+>>> print(X)
+Ans:-
+The output of the above code will be NI
+Here's why:
+
+We first create a variable X with the value 'iNeuron'.
+We then define a function func() that uses the global keyword to indicate that it will be modifying the global variable X.
+Inside func(), we change the value of X to 'NI'.
+We then call func(), which modifies the value of X to 'NI'.
+Finally, we print the value of X, which is now 'NI'
+
+
+5. What about this code—what’s the output, and why?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+X = 'NI'
+def nested():
+print(X)
+nested()
+
+
+>>> func()
+>>> X
+Ans;-
+The code, as written, will result in a SyntaxError.
+The SyntaxError occurs because the print(X) statement inside nested() should be indented to be part of the function. Here is the corrected code
+
+6. How about this code: what is its output in Python 3, and explain?
+
+
+>>> def func():
+X = 'NI'
+def nested():
+nonlocal X
+X = 'Spam'
+nested()
+print(X)
+
+
+>>> func()
+
+Ans:-
+When you call func(), it prints Spam, which is the value of X after it has been modified by the nested() function.
